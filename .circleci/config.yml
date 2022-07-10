@@ -6,11 +6,11 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: npm install
+      - run: npm i
       - save_cache:
           key: "npm-packages"
-          path: 
-            /src/node-modules
+          paths: 
+            - /src/node-modules
       - run: npm run lint
 
   test:
